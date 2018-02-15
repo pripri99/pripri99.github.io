@@ -1,0 +1,10 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title> Hello Buddy!</title>
+</head>
+<body>
+<h1>Welcome !</h1>
+    <img class="profile-pic" src="pictureofme.png" />
+</body>
+</html>

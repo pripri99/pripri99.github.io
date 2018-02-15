@@ -1,0 +1,18 @@
+h1 {
+    color: white;
+    background-color: MediumSeaGreen;
+    margin: auto;
+    width: 50%;
+    border: 3px solid MediumSeaGreen;
+    padding: 10px;
+    font-family: "Helvetica", "Arial", "sans-serif";
+}
+body {
+     background-image: url(http://www.wackyfacephotobooth.com/wp-content/uploads/2017/01/winter-background-snowflakes-wallpaper.jpg);
+     background-repeat: no-repeat;
+}
+img {
+     width: 20%;
+     heigth: 20%;
+
+}
