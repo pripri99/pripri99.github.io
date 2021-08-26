@@ -1,14 +1,30 @@
 <head><script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@0.13.5"> </script>
 <script>
+          function validateForm() {
+                    let a = document.forms["myForm"]["a"].value;
+                    let b = document.forms["myForm"]["b"].value;
+                    
+                    y = model.predict(tf.zeros([a,b]))         //To try any other input use tf.tensor2d([[1,0]]) 
+                    document.getElementById('test').innerHTML = y.dataSync()[0] 
+                    
+          }
+
           async function loadModel(){ 
-              model = await tf.loadModel('web_model/model.json') 
-              y = model.predict(tf.zeros([1,2]))         //To try any other input use tf.tensor2d([[1,0]]) 
-              document.getElementById('out').innerHTML = y.dataSync()[0] 
+                    model = await tf.loadModel('web_model/model.json') 
+                    y = model.predict(tf.zeros([1,2]))         //To try any other input use tf.tensor2d([[1,0]]) 
+                    document.getElementById('out').innerHTML = y.dataSync()[0] 
           } 
           loadModel() 
 </script>
 </head> 
 <body>
-        <p id ='out'></p> 
-        <p> hello </p> 
+          <p id ='out'></p>
+          <p id ='test'></p>
+          <p> hello </p> 
+          <form name="myForm" action="/action_page.php" onsubmit="return validateForm()" method="post">
+                    a= <input type="text" name="a">
+                    b= <input type="text" name="b">
+                    <input type="submit" value="Submit">
+          </form> 
+          
 </body>
